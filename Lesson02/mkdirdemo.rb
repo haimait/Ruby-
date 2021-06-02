@@ -25,3 +25,8 @@ foreign_ip_file.close
 
 is_delete = true
 File.delete(file_path) if File.exists?(file_path) if is_delete
+
+
+# 判断文件是否存在
+puts FileTest::exist?("helloworld.rb")
+p FileTest::exist?("/tmp/ip_result_file20210515-17252-1r26sn3.json")
