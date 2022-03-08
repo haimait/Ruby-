@@ -13,8 +13,7 @@ class Game
     end
 end
 
-puts Game.instance_methods(false)
-
+puts Game.instance_methods(false) #false:打印类里自定义的方法  / true:打印所有的方法,包括系统里内的方法
 mario = Game.new("超级马里奥", 350);
 mario.show()
 #if mario.respond_to?("show") #判断对象是否存在show方法

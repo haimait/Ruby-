@@ -9,14 +9,15 @@ class Game
         puts @id + ", " + @title + ", " + @price.to_s
     end
 
-    def self.toStr
+    def self.toStr # 静态方法,方法名为toStr
         puts "I love this game."
     end
 end
 
 zelda = Game.new("zelda", "ゼルダの伝説", 350)
 zelda.showGame
-#常常错误的滋味
+
+#常常错误的滋味 静态方法,不能实例化类之后调用
 zelda.toStr
 
 Game.toStr

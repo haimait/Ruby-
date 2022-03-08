@@ -20,8 +20,8 @@ class SteamGame < Game
     end
 end
 
-SteamGame.toStr
+SteamGame.toStr # 调用父类里的静态方法
 
 mygame = SteamGame.new("nobunaga-taishi", "信長の野望・大志", 450)
-mygame.showGame
-mygame.SteamInfo
+mygame.showGame # 调用父类里的方法
+mygame.SteamInfo # 调用自己的方法

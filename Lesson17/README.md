@@ -12,7 +12,7 @@ Ruby模块其实类似Class类的概念，但也有所不同，今天我们来�
 ~~~ruby
 module BaseFunc
     Version = "0.0.1"
-
+    BC = 123123
     def v
         return Version
     end
