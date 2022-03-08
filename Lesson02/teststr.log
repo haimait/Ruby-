@@ -1,0 +1,3 @@
+use_d01 ip: 101.80.76.139 ip_categories:["ADSL网络", "嵌入式设备"] ip_categories_tenghui: ["ADSL网络"] ip_rule_categories:["嵌入式设备"]
+use_d01 ip: 101.91.207.174 ip_categories:["IDC服务器", "远程控制"] ip_categories_tenghui: ["IDC服务器"] ip_rule_categories:["远程控制"]
+use_d01 ip: 101.94.139.204 ip_categories:["ADSL网络", "嵌入式设备"] ip_categories_tenghui: ["ADSL网络"] ip_rule_categories:["嵌入式设备"]

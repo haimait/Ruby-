@@ -1,0 +1,2 @@
+ use_d01 ip: 159.89.183.125 ip_categories:["IDC服务器", "DNS服务器", "企业管理产品"] ip_categories_tenghui: ["IDC服务器"] ip_rule_categories:["DNS服务器", "企业管理产品"]
+ use_d01 ip: 182.84.145.24 ip_categories:["ADSL网络", "DNS服务器", "HTTP代理服务器"] ip_categories_tenghui: ["ADSL网络"] ip_rule_categories:["DNS服务器", "HTTP代理服务器"]
