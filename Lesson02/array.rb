@@ -1,3 +1,15 @@
+data = ["240E:479:3A00:77BE:9092:84A4:C5F8:BA9E","240E:479:3A00:77BE:9092:84A4:C5F8:BA9e","240E:479:3A00:77BE:9092:84A4:C5F8:BA9f"]
+
+puts "data:#{data.join(",").downcase.split(",").uniq}"
+
+times = ["2021-10-20 00:19:47","2023-10-20 01:19:47","2023-10-20 01:19:47",nil,"2022-10-20 05:19:47"]
+# times = times.sort  #=> ["2021-10-20 00:19:47", "2022-10-20 05:19:47", "2023-10-20 01:19:47"]
+#去除nil 并去重 再按时间正序
+# times = times.compact.uniq.sort  #=> ["2021-10-20 00:19:47", "2022-10-20 05:19:47", "2023-10-20 01:19:47"]
+# 去除nil 并去重 再按时间倒序
+time = times.compact.uniq.sort { |x,y| y <=> x }.first  #=> ["2023-10-20 01:19:47", "2022-10-20 05:19:47", "2021-10-20 00:19:47"]
+puts "time:#{time}"
+
 puts "数组的循环-------------------------------------------------->"
 ary = ["fred", 10, 3.14, "This is a string", "last element"]
 ary.each do |i|
@@ -12,6 +24,8 @@ fred
 This is a string
 last element
 =end
+
+
 
 # 取数组里第一个元素里的某个key的值
 resp = [{ :ip => "166.88.134.120", :port => "80", :title => "", :protocol => "http", :domain => "", :cert => "", :lastupdatetime => "2021-05-14 12:43:32" }, { :ip => "166.88.134.120", :port => "80", :title => "", :protocol => "http", :domain => "", :cert => "", :lastupdatetime => "2021-05-14 12:43:32" }]

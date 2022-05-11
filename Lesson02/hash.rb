@@ -1,9 +1,38 @@
+require "json"
+t1 = {"1" => "January", "2" => "February"}
+t1_json = t1.to_json
+puts "t1.class:#{t1_json.class} t1:#{t1_json}" # t1.class:String t1:{"1":"January","2":"February"}
+t2 =JSON.parse(t1_json)
+puts "t2.class:#{t2.class} t2:#{t2}"  # t2.class:Hash t2:{"1"=>"January", "2"=>"February"}
+
+# testarr = {"114.215.129.208"=>"{\"ip\":{\"category\":[\"云主机提供商\",\"企业管理产品\",\"CMS\",\"IDC服务器\"],\"lastupdatetime\":\"2022-03-06 16:14:45\"}}", "171.121.18.62"=>"{\"ip\":{\"category\":[\"ADSL网络\",\"中小型路由交换设备\"],\"lastupdatetime\":\"2022-03-08 18:41:35\"}}"}
+# puts "testarr: #{testarr["114.215.129.208"]} type:#{testarr.is_a?(Array)} type2:#{testarr["114.215.129.208"].is_a?(Array)} "
+# testarr = {
+#     "category":["云主机提供商", "企业管理产品", "CMS", "IDC服务器"],
+#     "lastupdatetime":"2022-03-06 16:14:45"
+# }
+# puts "testarr: #{testarr[:ip][:lastupdatetime]} type:#{testarr.is_a?(Array)} type2:#{testarr["114.215.129.208"].is_a?(Array)} "
+# testarr = {:ip=>"114.215.129.208", :categories=>["云主机提供商", "企业管理产品", "CMS", "IDC服务器"], :lastupdatetime=>"2022-03-06 16:14:45"}
+testarr = `{:ip=>"171.121.18.62", :categories=>["ADSL网络", "中小型路由交换设备"], :lastupdatetime=>"2022-03-08 18:41:35"}"`
+# tr = JSON.parse(testarr)
+puts "testarr: #{testarr} testarr_class:#{testarr.class}"
+
+testarr_json=JSON.generate(testarr)
+puts "testarr_json: #{testarr_json} "
+
+testarr_json_res = JSON.parse(testarr_json)
+puts "testarr_json_res: #{testarr_json_res} #{testarr_json_res["lastupdatetime"]}"
+
 a1 = {"1" => "January", "2" => "February"}
 a2 = {"1" => "January", "2" => "February"}
 puts "获取长度------------------------------------------------------"
 puts a2.length #2
 #判断空
-puts a1.empty? #false
+puts a2.empty? #false
+
+a3 = {}
+puts a3.length # 0
+puts a3.empty? # true
 # 是否包函
 puts a1.include?"1" #true
 puts "keys，vaules 操作------------------------------------------------------"
